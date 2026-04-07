@@ -34,3 +34,11 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     status.innerText = "Invalid link format.";
   }
 });
+// Listen for error messages from the background script
+chrome.runtime.onMessage.addListener((message) => {
+  if (message.type === "ERROR") {
+    const status = document.getElementById('status');
+    status.style.color = "#e74c3c"; // Red for error
+    status.innerText = message.message;
+  }
+});
