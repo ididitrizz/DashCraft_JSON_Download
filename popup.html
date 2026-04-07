@@ -2,19 +2,104 @@
 <html>
 <head>
   <style>
-    body { width: 220px; padding: 12px; font-family: sans-serif; }
-    input { width: 100%; padding: 8px; box-sizing: border-box; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
-    button { width: 100%; cursor: pointer; padding: 10px; background-color: #2ecc71; color: white; border: none; border-radius: 4px; font-weight: bold; }
-    button:hover { background-color: #27ae60; }
-    #status { font-size: 11px; margin-top: 8px; color: #e74c3c; word-wrap: break-word; }
+    /* Clean, modern styling */
+    body { 
+      width: 240px; 
+      padding: 15px; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .header-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .app-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+    }
+
+    .input-group {
+      margin-bottom: 12px;
+    }
+
+    input { 
+      width: 100%; 
+      padding: 10px; 
+      box-sizing: border-box; 
+      border: 1px solid #ddd; 
+      border-radius: 6px; 
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      border-color: #3498db;
+    }
+
+    button { 
+      width: 100%; 
+      cursor: pointer; 
+      padding: 10px; 
+      background-color: #2ecc71; 
+      color: white; 
+      border: none; 
+      border-radius: 6px; 
+      font-weight: bold; 
+      font-size: 13px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover { 
+      background-color: #27ae60; 
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    #status { 
+      font-size: 11px; 
+      margin-top: 10px; 
+      text-align: center;
+      min-height: 15px;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 5px;
+    }
   </style>
 </head>
 <body>
-  <strong>DashCraft Downloader</strong>
-  <p style="font-size: 12px;">Paste track link or ID:</p>
-  <input type="text" id="trackInput" placeholder="dashcraft.io/?t=..." />
+
+  <div class="header">
+    <span class="header-title">DashCraft JSON Downloader</span>
+    <img src="icon48.png" alt="Icon" class="app-icon">
+  </div>
+
+  <div class="input-group">
+    <div class="hint">Paste link or Track ID:</div>
+    <input type="text" id="trackInput" placeholder="e.g. 12345 or dashcraft.io/?t=..." autofocus>
+  </div>
+
   <button id="downloadBtn">Download JSON</button>
+
   <div id="status"></div>
+
   <script src="popup.js"></script>
 </body>
 </html>
