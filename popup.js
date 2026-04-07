@@ -50,7 +50,12 @@ chrome.runtime.onMessage.addListener((message) => {
     status.style.color = "#e74c3c";
     status.innerText = message.message;
   } else if (message.type === "SUCCESS") {
-    status.style.color = "#27ae60";
+    status.style.color = "#2ecc71";
     status.innerText = "Download started!";
-  }
-});
+    
+    // Reset status after 3 seconds
+    setTimeout(() => {
+        status.style.color = "var(--text-dim)";
+        status.innerText = "Ready";
+    }, 3000);
+}
