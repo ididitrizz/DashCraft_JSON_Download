@@ -3,6 +3,9 @@
   "name": "DashCraft JSON Downloader",
   "version": "1.0",
   "permissions": ["activeTab", "downloads"],
+"host_permissions": [
+  "https://cdn.dashcraft.io/*"
+]
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
