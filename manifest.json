@@ -4,8 +4,10 @@
   "version": "1.0",
   "permissions": ["activeTab", "downloads"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
   },
+  "icons": "icon.png",
   "background": {
     "service_worker": "background.js"
   }
