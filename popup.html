@@ -35,18 +35,31 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #3d3d3d;
-      padding-bottom: 12px;
+      padding-bottom: 15px;
+    }
+
+    .header-text-group {
+      display: flex;
+      flex-direction: column;
     }
 
     .header-title {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      background: linear-gradient(45deg, #fff, #888);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #fff;
+      line-height: 1;
     }
 
+    .header-subtitle {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent); /* This makes the subtitle green */
+      margin-top: 4px;
+    }
+    
     .app-icon {
       width: 32px;
       height: 32px;
@@ -144,7 +157,10 @@
 
   <div class="container">
     <div class="header">
-      <span class="header-title">DASHCRAFT</span>
+      <div class="header-text-group">
+        <span class="header-title">DASHCRAFT</span>
+        <span class="header-subtitle">Track Downloader</span>
+      </div>
       <img src="icon.png" alt="Icon" class="app-icon">
     </div>
 
