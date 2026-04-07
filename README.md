@@ -32,3 +32,5 @@ The extension should appear and you should be ready to go!
 If any of this doesn't work, feel free to reach out to me in https://github.com/ididitrizz/DashCraft_JSON_Download/issues and I will try to respond as soon as possible.
 If you like this tool, please share it with friends and follow me on DashCraft (https://dashcraft.io?u=68f74a06b308c1dc2655c54c).
 Thank you for using my DashCraft_JSON_Download tool!
+
+For additional info, check out my track ID data: https://ididitrizz.github.io/DashCraft_Piece_IDs/
