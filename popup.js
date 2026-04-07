@@ -1,7 +1,9 @@
-document.getElementById('downloadBtn').addEventListener('click', () => {
-  const inputElement = document.getElementById('trackInput');
-  const inputVal = inputElement.value.trim();
-  const status = document.getElementById('status');
+const downloadBtn = document.getElementById('downloadBtn');
+const trackInput = document.getElementById('trackInput');
+const status = document.getElementById('status');
+
+downloadBtn.addEventListener('click', () => {
+  const inputVal = trackInput.value.trim();
 
   if (!inputVal) {
     status.style.color = "#e74c3c";
@@ -10,8 +12,6 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
   }
 
   let trackId = "";
-
-  // Regex to extract ID from URL or take raw ID
   if (inputVal.includes("?t=")) {
     const match = inputVal.match(/[?&]t=([^&]+)/);
     trackId = match ? match[1] : "";
@@ -20,25 +20,37 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
   }
 
   if (trackId) {
-    status.style.color = "#27ae60";
-    status.innerText = `Downloading: ${trackId}`;
-    
-    // Send to background service worker
+    // START LOADING STATE
+    status.style.color = "#3498db";
+    status.innerText = "Checking CDN...";
+    downloadBtn.disabled = true;
+    downloadBtn.innerText = "Working...";
+    downloadBtn.style.backgroundColor = "#95a5a6";
+
+    // Send to background
     chrome.runtime.sendMessage({ type: "DOWNLOAD_TRACK", id: trackId });
 
-    // --- CLEAR THE INPUT ---
-    inputElement.value = ""; 
-    inputElement.focus(); // Returns cursor to the box for the next link
+    // Clear input
+    trackInput.value = "";
+    trackInput.focus();
   } else {
     status.style.color = "#e74c3c";
     status.innerText = "Invalid link format.";
   }
 });
-// Listen for error messages from the background script
+
+// Listen for response from background script
 chrome.runtime.onMessage.addListener((message) => {
+  // RESET BUTTON
+  downloadBtn.disabled = false;
+  downloadBtn.innerText = "Download JSON";
+  downloadBtn.style.backgroundColor = "#2ecc71";
+
   if (message.type === "ERROR") {
-    const status = document.getElementById('status');
-    status.style.color = "#e74c3c"; // Red for error
+    status.style.color = "#e74c3c";
     status.innerText = message.message;
+  } else if (message.type === "SUCCESS") {
+    status.style.color = "#27ae60";
+    status.innerText = "Download started!";
   }
 });
