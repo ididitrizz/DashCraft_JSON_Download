@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "DashCraft JSON Downloader",
+  "version": "1.0",
+  "permissions": ["activeTab", "downloads"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
