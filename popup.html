@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 220px; padding: 12px; font-family: sans-serif; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { width: 100%; cursor: pointer; padding: 10px; background-color: #2ecc71; color: white; border: none; border-radius: 4px; font-weight: bold; }
+    button:hover { background-color: #27ae60; }
+    #status { font-size: 11px; margin-top: 8px; color: #e74c3c; word-wrap: break-word; }
+  </style>
+</head>
+<body>
+  <strong>DashCraft Downloader</strong>
+  <p style="font-size: 12px;">Paste track link or ID:</p>
+  <input type="text" id="trackInput" placeholder="dashcraft.io/?t=..." />
+  <button id="downloadBtn">Download JSON</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
