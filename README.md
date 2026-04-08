@@ -11,6 +11,8 @@ Open the Chrome extension and paste the link copied from the "SHARE" button in t
 Press the "DOWNLOAD JSON" button.
 If it comes back with an error message, that means the link or ID is invalid.
 When the box at the bottom says "Download Started!" then the track JSON is downloading to your computer.
+The filename should look like: "dashcraft_track_[TRACK ID].json".
+You can now read the data on any DashCraft track!
 
 HOW TO ADD AS AN EXTENSION:
 
