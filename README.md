@@ -37,11 +37,11 @@ To better understand what the JSON tells you, here is what each part of the JSON
 
 "_id": The track identifier, what is at the end of track links to tell the game what track is being loaded. <br>
 "trackPieces": The list of pieces that are in the track. <br>
-     "id": Identifier for the piece. <br>
-     "uid": In which sequence the piece was placed. <br>
-     "p": The piece's XYZ coordinates. <br>
-     "r": The rotation of the piece. <br>
-     "a": Any additions to the piece, such as boosters, ramps or checkpoints. <br>
+&emsp; "id": Identifier for the piece. <br>
+&emsp; "uid": In which sequence the piece was placed. <br>
+&emsp; "p": The piece's XYZ coordinates. <br>
+&emsp; "r": The rotation of the piece. <br>
+&emsp; "a": Any additions to the piece, such as boosters, ramps or checkpoints. <br>
 "computedLinkedCheckpoints": Any linked checkpoints' coordinates (seen as a blue line in the editor). <br>
 "editorVersion": The version of the editor. <br>
 "isPublic": Whether or not the track is a public track. <br>
