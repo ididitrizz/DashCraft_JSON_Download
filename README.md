@@ -1,6 +1,6 @@
-DASHCRAFT TRACK JSON DOWNLOADER
+# **DASHCRAFT TRACK JSON DOWNLOADER**
 
-HOW TO USE THIS TOOL:
+**HOW TO USE THIS TOOL:**
 
 This Chrome extension allows you to download the JSON of any track on DashCraft.io, using a track link or ID.
 To get a track link, open the desired track in a race and press the three dots:
@@ -14,7 +14,7 @@ When the box at the bottom says "Download Started!" then the track JSON is downl
 The filename should look like: "dashcraft_track_[TRACK ID].json".
 You can now read the data on any DashCraft track!
 
-HOW TO ADD AS AN EXTENSION:
+**HOW TO ADD AS AN EXTENSION:**
 
 Go to https://github.com/ididitrizz/DashCraft_JSON_Download and click "Code":
 <img width="1365" height="596" alt="Screenshot 2026-04-07 10 12 55 AM" src="https://github.com/user-attachments/assets/5525c8fb-f658-4ef5-b15e-0079abd138f1" />
@@ -31,7 +31,7 @@ This should open and have another folder with the same title.
 Select this folder and click "Open".
 The extension should appear and you should be ready to go!
 
-READING THE JSON:
+**READING THE JSON:**
 
 To better understand what the JSON tells you, here is what each part of the JSON means. (NOTE: To get info on what the piece IDs correspond to, check out this page: https://ididitrizz.github.io/DashCraft_Piece_IDs/)
 
