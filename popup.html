@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --card-bg: #2d2d2d;
+      --text-main: #ffffff;
+      --text-dim: #b3b3b3;
+      --accent: #2ecc71;
+      --accent-hover: #27ae60;
+      --error: #ff4757;
+      --info: #3498db;
+    }
+
+    body { 
+      width: 280px; 
+      padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #3d3d3d;
+      padding-bottom: 15px;
+    }
+
+    .header-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .header-subtitle {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+    
+    .app-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input { 
+      width: 100%; 
+      padding: 12px; 
+      box-sizing: border-box; 
+      background-color: var(--card-bg);
+      border: 2px solid transparent;
+      border-radius: 8px; 
+      color: white;
+      font-size: 13px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+      background-color: #333;
+    }
+
+    button { 
+      width: 100%; 
+      cursor: pointer; 
+      padding: 12px; 
+      background-color: var(--accent); 
+      color: #fff; 
+      border: none; 
+      border-radius: 8px; 
+      font-weight: 700; 
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+    }
+
+    button:hover { 
+      background-color: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(46, 204, 113, 0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    #status { 
+      font-size: 12px; 
+      text-align: center;
+      min-height: 18px;
+      padding: 8px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.03);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer {
+      font-size: 10px;
+      text-align: center;
+      color: #555;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="header-text-group">
+        <span class="header-title">DASHCRAFT.IO</span>
+        <span class="header-subtitle">Track Downloader</span>
+      </div>
+      <img src="icon2.png" alt="Icon" class="app-icon">
+    </div>
+
+    <div class="input-wrapper">
+      <label for="trackInput">Track Link or ID</label>
+      <input type="text" id="trackInput" placeholder="Paste here..." autofocus>
+    </div>
+
+    <button id="downloadBtn">Download JSON</button>
+
+    <div id="status">Ready</div>
+    
+    <div class="footer">v1.0 - JSON Fetcher</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
